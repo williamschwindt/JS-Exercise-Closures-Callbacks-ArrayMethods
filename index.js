@@ -228,7 +228,7 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
   let sizes = runners.filter(function(person) {
     return person.shirt_size === tShirtSize;
   });
-  return sizes.map(shirtSize => `${shirtSize.first_name}, ${shirtSize.last_name}`);
+  return sizes.map(shirtSize => `${shirtSize.first_name} ${shirtSize.last_name}`);
 }
 
 /**
@@ -241,8 +241,10 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
 */
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
+function tallyUpDonations(runners) {
+  let donations = runners.map(person => person.donation);
+  
+  return donations.reduce( (total, num) => total += num, 0);
 }
 
 /////////////// CLOSURES ///////////////
