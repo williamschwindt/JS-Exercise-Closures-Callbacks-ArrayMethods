@@ -92,6 +92,7 @@ function processSum(numbersList, callback) {
     return total += num;
   }, 0);
   return callback(sum);
+  
 }
 
 /**
