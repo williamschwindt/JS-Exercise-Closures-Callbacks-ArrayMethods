@@ -92,7 +92,7 @@ function processSum(numbersList, callback) {
     return total += num;
   }, 0);
   return callback(sum);
-  
+
 }
 
 /**
@@ -113,8 +113,9 @@ function processSum(numbersList, callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback) {
+  let product = num1 * num2;
+  return callback(product);
 }
 
 /**
@@ -137,8 +138,9 @@ function processProduct(/* CODE HERE */) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, callback) {
+  let itemIn = list.includes(item);
+  return callback(itemIn);
 }
 
 /**
